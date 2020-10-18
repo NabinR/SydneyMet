@@ -1,0 +1,42 @@
+/*
+ * UnderConstructionPage
+
+ */
+ 
+
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+#linkback {
+  font-size: small;
+  text-align: center;
+  opacity: 0.55;
+  margin: 10px;
+}
+
+
+
+#login-button a {
+  background-color: rgba(70, 70, 70, 1);
+  border-radius: 5px 0 0 5px;
+  opacity: 0.3;
+  padding: 10px;
+  color: #ffffff;
+  display: inline-block;
+}
+
+
+
+@media(max-width:767px){
+  #login-button {
+    bottom: 5px;
+  }
+  #login-button a {
+    padding: 5px;
+  }
+  #social a i {
+    margin: 5px;
+  }
+}
