@@ -1,0 +1,343 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    font-size: 18px;
+    background: url('/img/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-family: 'Poppins', sans-serif, serif;
+    font-size: medium;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+.footer-menu {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /*white-space: nowrap;*/
+    /* Set the fixed height of the footer here */
+    min-height: 240px;
+    line-height: 25px; /* Vertically center the text there */
+}
+
+
+/***** CSS CUSTOMISATION *****/
+
+.carousel-item {
+    height: 75vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-caption {
+    left: 20%;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.bg-light-custom {
+    background-color: rgb(245, 245, 245);
+}
+
+/* Start Menu */
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #menu .main-menu {
+    display: none;
+  }
+  
+  #tm:checked + .main-menu {
+    display: block;
+  }
+  
+  #menu input[type="checkbox"], 
+  #menu ul span.drop-icon {
+    display: none;
+  }
+  
+  #menu li, 
+  #toggle-menu, 
+  #menu .sub-menu {
+    border-style: solid;
+    border-color: rgba(0, 0, 0, .05);
+  }
+  
+  #menu li, 
+  #toggle-menu {
+    border-width: 0 0 1px;
+  }
+  
+  #menu .sub-menu {
+    background-color: #444;
+    border-width: 1px 1px 0;
+    margin: 0 1em;
+  }
+  
+  #menu .sub-menu li:last-child {
+    border-width: 0;
+  }
+  
+  #menu li, 
+  #toggle-menu, 
+  #menu a {
+    position: relative;
+    display: block;
+    color: white;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .125);
+  }
+  
+  #menu, 
+  #toggle-menu {
+    background-color: #093f89;
+  }
+  
+  #toggle-menu, 
+  #menu a {
+    padding: 0.2em 0.9em;
+  }
+  
+  #menu a {
+    transition: all .125s ease-in-out;
+    -webkit-transition: all .125s ease-in-out;
+  }
+  
+  #menu a:hover {
+    background-color: white;
+    color: #444;
+  }
+  
+  #menu .sub-menu {
+    display: none;
+  }
+  
+  #menu input[type="checkbox"]:checked + .sub-menu {
+    display: block;
+  }
+  
+  #menu .sub-menu a:hover {
+    color: #444;
+  }
+  
+  #toggle-menu .drop-icon, 
+  #menu li label.drop-icon {
+    position: absolute;
+    right: 0em;
+    top: 0em;
+    font-size: 2rem;
+  }
+  
+  #menu label.drop-icon, #toggle-menu span.drop-icon {
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .125);
+    text-shadow: 0 0 0 transparent;
+    color: rgba(255, 255, 255, .75);
+  }
+  
+  #menu .drop-icon {
+    line-height: 1;
+  }
+
+  @media only screen and (max-width: 64em) and (min-width: 52.01em) {
+    #menu li {
+      width: 33.333%;
+    }
+  
+    #menu .sub-menu li {
+      width: auto;
+    }
+  }
+  
+  @media only screen and (min-width: 52em) {
+    #menu .main-menu {
+      display: block;
+    }
+  
+    #toggle-menu, 
+    #menu label.drop-icon {
+      display: none;
+    }
+  
+    #menu ul span.drop-icon {
+      display: inline-block;
+    }
+  
+    #menu li {
+      float: left;
+      border-width: 0 1px 0 0;
+    }
+  
+    #menu .sub-menu li {
+      float: none;
+    }
+  
+    #menu .sub-menu {
+      border-width: 0;
+      margin: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 18rem;
+      z-index: 3000;
+    }
+  
+    #menu .sub-menu, 
+    #menu input[type="checkbox"]:checked + .sub-menu {
+      display: none;
+    }
+  
+    #menu .sub-menu li {
+      border-width: 0 0 1px;
+    }
+  
+    #menu .sub-menu .sub-menu {
+      top: 0;
+      left: 100%;
+    }
+  
+    #menu li:hover > input[type="checkbox"] + .sub-menu {
+      display: block;
+    }
+  }
+    
+/* End Menu */
+
+.btn {
+    font-size: large;
+    font-weight: 600;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.btn-primary {
+    border-color: #093f89;
+    background-color: #093f89;
+}
+
+.btn-outline-primary {
+    color: #093f89;
+    border-color: #093f89;
+}
+
+    .btn-outline-primary:hover {
+        border-color: #093f89;
+        background-color: #093f89;
+    }
+
+.bg-primary {
+    background-color: #093f89 !important;
+}
+
+.text-primary {
+    color: #093f89 !important;
+}
+
+.text-secondary {
+    color: #d71a21 !important;
+}
+
+a {
+    color: #093f89;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.3);
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.bg-custom {
+    background-color: rgba(240, 240, 240, 0.9);
+}
+
+/*tr {
+    line-height:5px;
+    min-height: 5px;
+    height: 5px;
+}*/

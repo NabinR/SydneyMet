@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://sydneymet.com.au/site/sitemap.xml
