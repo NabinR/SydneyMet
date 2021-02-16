@@ -220,6 +220,10 @@
         <lastmod>2021-02-01</lastmod>
     </url>
     <url>
+        <loc>https://sydneymet.com.au/site/mylibrary/</loc>
+        <lastmod>2021-02-01</lastmod>
+    </url>
+    <url>
         <loc>https://sydneymet.com.au/site/mysydneymet/</loc>
         <lastmod>2021-02-01</lastmod>
     </url>
@@ -227,11 +231,19 @@
         <loc>https://sydneymet.com.au/site/news-events/</loc>
     </url>
     <url>
-        <loc>https://sydneymet.com.au/site/news-events/sydneymet-blogs/</loc>
+        <loc>https://sydneymet.com.au/site/news-events/blogs/</loc>
         <lastmod>2021-02-01</lastmod>
     </url>
     <url>
-        <loc>https://sydneymet.com.au/site/news-events/sydneymet-news/</loc>
+        <loc>https://sydneymet.com.au/site/news-events/events/</loc>
+        <lastmod>2021-02-01</lastmod>
+    </url>
+    <url>
+        <loc>https://sydneymet.com.au/site/news-events/news/</loc>
+        <lastmod>2021-02-01</lastmod>
+    </url>
+    <url>
+        <loc>https://sydneymet.com.au/site/news-events/noticeboard/</loc>
         <lastmod>2021-02-01</lastmod>
     </url>
     <url>
