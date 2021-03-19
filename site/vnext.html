@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home - Sydney Met</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css?v=202103052015" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif, serif;
+            font-size: medium;
+        }
+
+        video {
+            object-fit: cover;
+            width: 100vw;
+            height: 95vh;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .bd-focus-item {
+            position: relative;
+        }
+
+        .bd-focus-item::before {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: #fafafa;
+            border-radius: 6px;
+            content: '';
+            display: block;
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(1.1);
+            transform-origin: center;
+            transition-duration: 172ms;
+            transition-property: opacity, transform;
+        }
+
+        .bd-focus-item:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .bd-focus-item {
+            align-items: center;
+            border-radius: 6px;
+            display: flex;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .bd-focus-item .title a,
+        .bd-focus-item .subtitle {
+            transition-duration: 172ms;
+            transition-property: color;
+        }
+
+        .bd-focus-item .title {
+            position: relative;
+            transition-duration: 172ms;
+            transition-property: color;
+        }
+
+        .bd-focus-item .subtitle {
+            color: #7a7a7a;
+            position: relative;
+        }
+
+        .bd-focus-item .icon {
+            color: #7a7a7a;
+            position: relative;
+        }
+
+        .bd-focus-item .bd-focus-text {
+            color: #7a7a7a;
+            position: relative;
+        }
+
+        .bd-best {
+            height: calc(386px + 3rem);
+            padding: 1.5rem 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bd-best-list {
+            align-items: stretch;
+            -webkit-animation-duration: 93.6s;
+            animation-duration: 93.6s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+            display: flex;
+            left: 0;
+            position: absolute;
+            top: 1.5rem;
+            -webkit-animation-name: bd-BestCarousel;
+            animation-name: bd-BestCarousel;
+        }
+
+        .bd-best-list:hover {
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+        }
+
+        .bd-best-item {
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin-right: 16px;
+            transition-duration: 172ms;
+            transition-property: box-shadow, transform;
+            width: 504px;
+        }
+
+        .bd-best-item.is-medium {
+            font-size: 1.125em;
+        }
+
+        .bd-best-item.is-large {
+            font-size: 1.25em;
+        }
+
+        .bd-best-item.is-huge {
+            font-size: 1.5em;
+        }
+
+        .bd-best-item:hover {
+            box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
+            transform: translateY(-0.5em);
+        }
+
+        .screenshot {
+            align-self: flex-start;
+            display: block;
+            transition-duration: 172ms;
+            transition-property: box-shadow, transform;
+        }
+
+        .screenshot,
+        .screenshot img {
+            border-radius: 6px;
+        }
+
+        .screenshot img {
+            display: inline-block;
+            height: auto;
+            vertical-align: top;
+            width: auto;
+        }
+
+        @-webkit-keyframes bd-BestCarousel {
+            100% {
+                transform: translateX(calc(-100% + 3120px));
+            }
+        }
+
+        @keyframes bd-BestCarousel {
+            100% {
+                transform: translateX(calc(-100% + 3120px));
+            }
+        }
+    </style>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
+</head>
+
+<body class="">
+    <!-- <nav class="navbar is-fixed-top is-flex-wrap-wrap" style="background: linear-gradient(to right,  #D61820 0%, #023F88 15%, #023F88,#023F88 85%, #D61820 100%);"> -->
+    <!-- <nav class="navbar is-fixed-top is-flex-wrap-wrap" style="background-image: url(https://imactivate.com.au/assets/1b1c5cf6-ee99-40f3-ac3a4ba2558712)"> -->
+    <nav class="navbar is-fixed-top is-flex-wrap-wrap"
+        style="background: linear-gradient(-3deg, #D61820 0%, #023F88 60%, #D61820 110%);">
+        <!-- <nav class="navbar is-fixed-top is-flex-wrap-wrap" style="background: linear-gradient(to bottom right,#D61820 -10%, #023F88 40%, #D61820 110%);"> -->
+        <!-- <nav class="navbar is-fixed-top is-flex-wrap-wrap" style="background: linear-gradient(to bottom right,#D61820 5%, #023F88 50%);"> -->
+        <!-- <nav class="navbar is-fixed-top is-flex-wrap-wrap" style="background: linear-gradient(to top,#D61820 0%, #023F88 80%);"> -->
+        <div class="tile is-12">
+            <div class="container level">
+                <div class="level-left mx-2 my-2 is-hidden-touch">
+                    <div class="card p-1">
+                        <a href="#">
+                            <img class="" src="img/sydneymet-logo-text.png" width="246" alt="Sydney Met Logo" />
+                        </a>
+                    </div>
+                </div>
+                <div class="level-right is-flex-direction-column my-0">
+                    <div class="level-item mx-2 my-2 is-justify-content-flex-start">
+                        <a class="card p-1 mx-2 is-hidden-desktop" href="#">
+                            <img class="" src="img/sydneymet-plaque.png" width="30" alt="Sydney Met Plaque">
+                        </a>
+                        <a class="has-text-light mx-2" href="#">mySydneyMet</a>
+                        <a class="has-text-light mx-2" href="#">Moodle</a>
+                        <a class="has-text-light mx-2" href="#">Library</a>
+                        <a class="has-text-light mx-2" href="#">Almuni</a>
+                        <a class="has-text-light mx-2" href="#">Agent</a>
+                    </div>
+                    <div class="level-item mb-2 is-hidden-desktop is-hidden-tablet"></div>
+                    <div class="level-item mx-2 my-2 field is-grouped">
+                        <p class="control">
+                            <a class="button is-primary is-rounded" href="tel:+61297441356">
+                                <span class="icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </span>
+                                <span>02 9744 1356</span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-info is-rounded" href="#">APPLY NOW</a>
+                        </p>
+                        <p class="control">
+                            <a class="fb-button" data-social-network="Facebook" data-social-action="fb"
+                                data-social-target="https://sydneymet.edu.au" target="_blank"
+                                href="https://www.facebook.com/Sydney-Metropolitan-Institute-of-Technology-289423551656897">
+                                <span class="icon mt-1 has-text-light">
+                                    <i class="fab fa-facebook is-size-4"></i>
+                                </span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="tw-button" data-social-network="Twitter" data-social-action="tweet"
+                                data-social-target="https://sydneymet.edu.au" target="_blank"
+                                href="https://twitter.com/SydneyMetropol1">
+                                <span class="icon mt-1 has-text-light">
+                                    <i class="fab fa-twitter is-size-4"></i>
+                                </span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="lk-button" data-social-network="Twitter" data-social-action="tweet"
+                                data-social-target="https://sydneymet.edu.au" target="_blank"
+                                href="https://www.linkedin.com/company/sydney-metropolitan-institute-of-technology">
+                                <span class="icon mt-1 has-text-light">
+                                    <i class="fab fa-linkedin is-size-4"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar is-dark tile is-12" role="navigation" aria-label="main navigation">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item is-hidden-fullhd is-hidden-desktop" href="#">
+                        <!-- <img class="mr-6" src="img/sydneymet-plaque.png"> -->
+                        <span class="is-size-5 ml-4">Sydney Metropolitan</span>
+                    </a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        data-target="navMenu">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div id="navMenu" class="navbar-menu ">
+                    <div class="navbar-start">
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                About Us
+                            </a>
+
+                            <div class="navbar-dropdown is-boxed has-background-info-light is-size-6">
+                                <a class="navbar-item">
+                                    Welcome
+                                </a>
+                                <a class="navbar-item">
+                                    Who We Are
+                                </a>
+                                <a class="navbar-item">
+                                    Aspiration
+                                </a>
+                                <a class="navbar-item">
+                                    Governance
+                                </a>
+                                <a class="navbar-item">
+                                    Strategic Plan
+                                </a>
+                                <a class="navbar-item">
+                                    Policy & Procedure
+                                </a>
+                                <a class="navbar-item">
+                                    Graduate Attributes
+                                </a>
+                                <a class="navbar-item">
+                                    Sydney Met Campus
+                                </a>
+                                <a class="navbar-item">
+                                    Sydney Met Charity
+                                </a>
+                                <a class="navbar-item">
+                                    Employment
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                Course
+                            </a>
+
+                            <div class="navbar-dropdown is-boxed has-background-info-light is-size-6">
+                                <a class="navbar-item">
+                                    Bachelor of Business (Entrepreneurship)
+                                </a>
+                                <a class="navbar-item">
+                                    Entry Requirements
+                                </a>
+                                <a class="navbar-item">
+                                    Unit of Study in BBUS (ENTR)
+                                </a>
+                                <a class="navbar-item">
+                                    Credit Transfer & RPL
+                                </a>
+                                <a class="navbar-item">
+                                    Work Integrated Learning
+                                </a>
+                                <a class="navbar-item">
+                                    Academic Calendar
+                                </a>
+                                <a class="navbar-item">
+                                    Course Contact
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                Future Student
+                            </a>
+
+                            <div class="navbar-dropdown is-boxed has-background-info-light is-size-6">
+                                <a class="navbar-item">
+                                    Why Study at Sydney Met
+                                </a>
+                                <a class="navbar-item">
+                                    How to Apply
+                                </a>
+                                <a class="navbar-item">
+                                    International Student
+                                </a>
+                                <a class="navbar-item">
+                                    Domestic Student
+                                </a>
+                                <a class="navbar-item">
+                                    Course Brochure
+                                </a>
+                                <a class="navbar-item">
+                                    Course Brochure
+                                </a>
+                                <a class="navbar-item">
+                                    Academic Calendar
+                                </a>
+                                <a class="navbar-item">
+                                    Fees, Other Costs & Refund
+                                </a>
+                                <a class="navbar-item">
+                                    Studying in Australia
+                                </a>
+                                <a class="navbar-item">
+                                    Living in Australia
+                                </a>
+                                <a class="navbar-item">
+                                    Working in Australia
+                                </a>
+                                <a class="navbar-item">
+                                    Tuition Protection
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                Current Student
+                            </a>
+
+                            <div class="navbar-dropdown is-boxed has-background-link-light is-size-6">
+                                <a class="navbar-item">
+                                    Orientation
+                                </a>
+                                <a class="navbar-item">
+                                    Enrolment
+                                </a>
+                                <hr class="navbar-divider has-background-grey-lighter">
+                                <a class="navbar-item has-dropdown  is-hoverable">
+                                    <strong>Student Support & Services</strong>
+                                </a>
+                                <a class="navbar-item ml-3">
+                                    Academic
+                                </a>
+                                <a class="navbar-item ml-3">
+                                    English
+                                </a>
+                                <a class="navbar-item ml-3">
+                                    Information Technology
+                                </a>
+                                <a class="navbar-item ml-3">
+                                    Exam & Assessment
+                                </a>
+                                <a class="navbar-item ml-3">
+                                    Career Development
+                                </a>
+                                <a class="navbar-item ml-3">
+                                    Other Support & Services
+                                </a>
+                                <hr class="navbar-divider has-background-grey-lighter">
+                                <a class="navbar-item">
+                                    Learning Hub
+                                </a>
+                                <a class="navbar-item">
+                                    Academic Calendar & Timetable 2021
+                                </a>
+                                <a class="navbar-item">
+                                    Student Handbook
+                                </a>
+                                <a class="navbar-item">
+                                    mySydneyMet
+                                </a>
+                                <a class="navbar-item">
+                                    ESOS Requirements
+                                </a>
+                                <a class="navbar-item">
+                                    Staff Contact
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                Research
+                            </a>
+
+                            <div class="navbar-dropdown is-boxed has-background-info-light is-size-6">
+                                <a class="navbar-item">
+                                    Our Research Approach
+                                </a>
+                                <a class="navbar-item">
+                                    Scholarship of Teaching
+                                </a>
+                                <a class="navbar-item">
+                                    Research Policy Framework
+                                </a>
+                                <a class="navbar-item">
+                                    Seminar Series
+                                </a>
+                                <a class="navbar-item">
+                                    Resources
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                News & Events
+                            </a>
+
+                            <div class="navbar-dropdown is-boxed has-background-info-light is-size-6">
+                                <a class="navbar-item">
+                                    Noticeboard
+                                </a>
+                                <a class="navbar-item">
+                                    Sydney Met News
+                                </a>
+                                <a class="navbar-item">
+                                    Upcoming Events
+                                </a>
+                                <a class="navbar-item">
+                                    Sydney Met Blogs
+                                </a>
+                                <a class="navbar-item">
+                                    Useful Links
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <p class="control">
+                                    <a class="button is-primary is-rounded is-outlined" href="#">
+                                        <span>CONTACT US</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </nav>
+
+    <section class="hero is-light">
+        <figure class="image">
+            <video class="has-ratio" preload="yes" autoplay="" loop="" poster="" id="video_bg">
+                <source src="img/sydney-harbour.webm">
+                Your browser does not support the Video tag. Please upgrade your browser.
+                <source src="img/sydney-harbour.mp4" type="video/mp4">
+                Your browser does not support the Video tag. Please upgrade your browser.
+            </video>
+        </figure>
+
+        <div class="hero-header">
+            <div class="has-text-centered is-overlay" style="top:350px;">
+                <h1 class="title is-2 has-text-light">Welcome to Sydney Met</h1>
+                <h2 class="subtitle is-4 has-text-light"><em>Your future starts here . . .</em></h2>
+                <p class="control py-6">
+                    <a class="button is-info is-rounded is-large" href="#">
+                        <span class="icon">
+                            <i class="fas fa-download"></i>
+                        </span>
+                        <span>Download Brochure</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="hero-footer">
+            <div class="has-text-centered" style="position:relative; top:-100px">
+                <p class="control">
+                    <a href="#why-sydney-met">
+                        <span class="has-text-light is-size-5">Scroll Down</span>
+                        <hr class="is-invisible my-0">
+                        <span class="icon has-text-light is-size-4 has-text-weight-light">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-sydney-met" class="section has-text-centered has-background-light">
+        <div class="container pb-6">
+            <h1 class="title is-2 has-text-link">
+                Why Study at Sydney Met?
+            </h1>
+            <article class="media">
+                <div class="media-left">
+                    <figure class="image is-64x64">
+                        <img src="img/sydneymet-plaque.png" width="100" alt="Sydeny Met Logo Plaque">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            Sydney Met is a unique Higher Education Provider that responds to the need for a new culture
+                            in
+                            Australian higher education where students are placed at the centre and are provided with a
+                            culturally
+                            flexible and socially committed learning experience.
+                            <br /><br />
+                            We aspire to be Australia’s pioneering
+                            College for socially responsible, culturally appropriate
+                            and entrepreneurship-oriented higher education.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- <p class="control">
+                <a class="button is-primary is-outlined is-rounded is-medium mx-5 my-5" href="#">Welcome</a>
+                <a class="button is-info is-outlined is-rounded is-medium mx-5 my-5" href="#">Who We Are</a>
+            </p> -->
+            <div class="columns is-multiline my-5">
+                <div class="column is-7-desktop is-7-tablet">
+                    <a href="#">
+                        <article class="media notification has-background-primary-light has-text-dark bd-focus-item">
+                            <div class="media-content">
+                                <div class="content py-5">
+                                    <span class="icon has-text-primary">
+                                        <i class="fas fa-globe-asia fa-3x"></i>
+                                    </span>
+                                    <span>
+                                        <h2 class="subtitle is-4">
+                                            Academic excellence in an inter-cultural setting
+                                        </h2>
+                                    </span>
+                                    <p class="bd-focus-text">
+                                        Sydney Met is committed to provide high quality courses currently favoured by
+                                        students and employers
+                                        alike. Our courses are developed by academics of multicultural backgrounds and
+                                        place
+                                        students at the
+                                        centre. In so doing, we encourage critical and independent thinking and offer
+                                        positive learning
+                                        experience and outcomes. You’ll thrive on plenty of autonomy to direct your own
+                                        learning. Our small
+                                        class sizes mean you enjoy more contact time with our teachers, plus support
+                                        whenever you need it to
+                                        get the bd-best out of your studies.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+                <div class="column is-5-desktop is-5-tablet">
+                    <a href="#">
+                        <article class="media notification has-background-info-light has-text-dark bd-focus-item">
+                            <div class="media-content">
+                                <div class="content py-5">
+                                    <span class="icon has-text-info">
+                                        <i class="fas fa-user-graduate fa-3x"></i>
+                                    </span>
+                                    <span>
+                                        <h2 class="subtitle is-4">
+                                            Student-centred support & services
+                                        </h2>
+                                    </span>
+                                    <p class="bd-focus-text">
+                                        We provide students with timely and tailored support and services. We offer
+                                        culturally sensitive and engaged teaching, learning and assessment services to
+                                        cater
+                                        for students of diverse origins and needs. Sydney Met engages diverse and
+                                        experienced teachers and staff to ensure a supportive and inclusive environment.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+                <div class="column is-4-desktop is-6-tablet">
+                    <a href="#">
+                        <article class="media notification has-background-link-light has-text-dark bd-focus-item">
+                            <div class="media-content">
+                                <div class="content py-5">
+                                    <span class="icon has-text-link">
+                                        <i class="fas fa-user-tie fa-3x"></i>
+                                    </span>
+                                    <span>
+                                        <h2 class="subtitle is-4">
+                                            Be in demand
+                                        </h2>
+                                    </span>
+                                    <p class="bd-focus-text">
+                                        You will develop the highly practical and professional knowledge, skills and the
+                                        attitude needed for becoming an entrepreneur. Or as an employee, you will be
+                                        highly
+                                        sought-after in the job market.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+                <div class="column is-4-desktop is-6-tablet">
+                    <a href="#">
+                        <article class="media notification has-background-warning-light has-text-dark bd-focus-item">
+                            <div class="media-content">
+                                <div class="content py-5">
+                                    <span class="icon has-text-warning">
+                                        <i class="fas fa-briefcase fa-3x"></i>
+                                    </span>
+                                    <span>
+                                        <h2 class="subtitle is-4">
+                                            Real-world work experience
+                                        </h2>
+                                    </span>
+                                    <p class="bd-focus-text">
+                                        At Sydney Met you will spend time gaining work experience in a real-world
+                                        entrepreneurial company to gain knowledge and skills. You can also work on your
+                                        own
+                                        business projects, preparing you to launch into life after college!
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+                <div class="column is-4-desktop is-6-tablet">
+                    <a href="#">
+                        <article class="media notification has-background-success-light has-text-dark bd-focus-item">
+                            <div class="media-content">
+                                <div class="content py-5">
+                                    <span class="icon has-text-success">
+                                        <i class="fas fa-dollar-sign fa-3x"></i>
+                                    </span>
+                                    <span>
+                                        <h2 class="subtitle is-4">
+                                            Affordable fees
+                                        </h2>
+                                    </span>
+                                    <p class="bd-focus-text">
+                                        Sydney Met fees and charges are affordable. These fees are set by benchmarking
+                                        with
+                                        compariable colleges in Sydney.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+                <div class="column is-4-desktop is-6-tablet">
+                    <a href="#">
+                        <article class="media notification has-background-danger-light has-text-dark bd-focus-item">
+                            <div class="media-content">
+                                <div class="content py-5">
+                                    <span class="icon has-text-danger">
+                                        <i class="fas fa-map-signs fa-3x"></i>
+                                    </span>
+                                    <span>
+                                        <h2 class="subtitle is-4">
+                                            Pathways for exciting career
+                                        </h2>
+                                    </span>
+                                    <p class="bd-focus-text">
+                                        Sydney Met maintains a strong partnership with businesses while it enables
+                                        students
+                                        to pursue actual enterpreneurial ventures as part of their study.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+                <div class="column is-4-desktop is-6-tablet">
+                    <a href="#">
+                        <article class="media notification has-background-primary-light has-text-dark bd-focus-item">
+                            <div class="media-content">
+                                <div class="content py-5">
+                                    <span class="icon has-text-primary">
+                                        <i class="fas fa-map-marked-alt fa-3x"></i>
+                                    </span>
+                                    <span>
+                                        <h2 class="subtitle is-4">
+                                            Convenient location
+                                        </h2>
+                                    </span>
+                                    <p class="bd-focus-text">
+                                        Study in the heart of Australia’s most vibrant student city, Sydney. Sydney Met
+                                        is
+                                        located in the vibrant suburb of Burwood, a transport hub just 15 minutes train
+                                        ride
+                                        from Sydney CBD, and home to a large and diverse multicultural community. You
+                                        can
+                                        step out of your lectures to discover arts, music, food, shopping and sports
+                                        next to
+                                        the college.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+                <div class="column is-4-desktop is-6-tablet">
+                    <a href="#">
+                        <article class="media notification has-background-info-light has-text-dark bd-focus-item">
+                            <div class="media-content">
+                                <div class="content py-5">
+                                    <span class="icon has-text-info">
+                                        <i class="fas fa-university fa-3x"></i>
+                                    </span>
+                                    <span>
+                                        <h2 class="subtitle is-4">
+                                            Excellent facilities
+                                        </h2>
+                                    </span>
+                                    <p class="bd-focus-text">
+                                        Our campus has everything you need to excel in your studies, including computer
+                                        lab,
+                                        wireless internet, library, study spaces and places to relax.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-sydney-met" class="section has-text-centered">
+        <div class="container py-6">
+            <h1 class="title is-2 has-text-link">
+                Download FREE Guides
+            </h1>
+            <div class="columns is-mobile is-centered is-multiline">
+                <div class="column is-3-widescreen is-4-desktop is-5-tablet is-8-mobile">
+                    <div class="card has-background-info-light">
+                        <div class="card-image">
+                            <figure class="image is-16by9">
+                                <img src="img/catalogue.jpg" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <!-- <p class="pt-5">
+                                    <span class="icon has-text-info">
+                                        <i class="fas fa-file-pdf fa-5x"></i>
+                                    </span>
+                                </p> -->
+                                <p>
+                                    Download your FREE guide on "GUIDE NAME". Provide a brief description of the guide
+                                    here.
+                                </p>
+                                <p class="control">
+                                    <a class="button is-info is-rounded is-medium" href="#">
+                                        <span class="icon">
+                                            <i class="fas fa-download"></i>
+                                        </span>
+                                        <span>Download Now</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-3-widescreen is-4-desktop is-5-tablet is-8-mobile">
+                    <div class="card has-background-info-light">
+                        <div class="card-image">
+                            <figure class="image is-16by9">
+                                <img src="img/handbook.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <!-- <p class="pt-5">
+                                    <span class="icon has-text-info">
+                                        <i class="fas fa-file-alt fa-5x"></i>
+                                    </span>
+                                </p> -->
+                                <p>
+                                    Download your FREE guide on "GUIDE NAME". Provide a brief description of the guide
+                                    here.
+                                </p>
+                                <p class="control">
+                                    <a class="button is-info is-rounded is-medium" href="#">
+                                        <span class="icon">
+                                            <i class="fas fa-download"></i>
+                                        </span>
+                                        <span>Download Now</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-3-widescreen is-4-desktop is-5-tablet is-8-mobile">
+                    <div class="card has-background-info-light">
+                        <div class="card-image">
+                            <figure class="image is-16by9">
+                                <img src="img/noticeboard.jpg" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <!-- <p class="pt-5">
+                                    <span class="icon has-text-info">
+                                        <i class="fas fa-file-invoice-dollar fa-5x"></i>
+                                    </span>
+                                </p> -->
+                                <p>
+                                    Download your FREE guide on "GUIDE NAME". Provide a brief description of the guide
+                                    here.
+                                </p>
+                                <p class="control">
+                                    <a class="button is-info is-rounded is-medium" href="#">
+                                        <span class="icon">
+                                            <i class="fas fa-download"></i>
+                                        </span>
+                                        <span>Download Now</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-3-widescreen is-4-desktop is-5-tablet is-8-mobile">
+                    <div class="card has-background-info-light">
+                        <div class="card-image">
+                            <figure class="image is-16by9">
+                                <img src="img/referencing-guide.jpg" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <!-- <p class="pt-5">
+                                    <span class="icon has-text-info">
+                                        <i class="fas fa-file-invoice-dollar fa-5x"></i>
+                                    </span>
+                                </p> -->
+                                <p>
+                                    Download your FREE guide on "GUIDE NAME". Provide a brief description of the guide
+                                    here.
+                                </p>
+                                <p class="control">
+                                    <a class="button is-info is-rounded is-medium" href="#">
+                                        <span class="icon">
+                                            <i class="fas fa-download"></i>
+                                        </span>
+                                        <span>Download Now</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section has-text-centered py-6 has-background-info">
+        <div class="bd-best">
+            <div class="bd-best-list">
+
+                <a href="#">
+                    <article class="media notification has-background-primary-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-primary">
+                                    <i class="fas fa-globe-asia fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Academic excellence
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    Sydney Met is committed to provide high quality courses currently favoured
+                                    by
+                                    students and employers
+                                    alike. Our courses are developed by academics of multicultural backgrounds
+                                    and
+                                    place
+                                    students at the
+                                    centre. In so doing, we encourage critical and independent thinking and
+                                    offer
+                                    positive learning
+                                    experience and outcomes...
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-info-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-info">
+                                    <i class="fas fa-user-graduate fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Student-centred support & services
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    We provide students with timely and tailored support and services. We offer
+                                    culturally sensitive and engaged teaching, learning and assessment services to
+                                    cater
+                                    for students of diverse origins and needs. Sydney Met engages diverse and
+                                    experienced teachers and staff to ensure a supportive and inclusive environment.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-warning-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-warning">
+                                    <i class="fas fa-user-tie fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Be in demand
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    You will develop the highly practical and professional knowledge, skills and the
+                                    attitude needed for becoming an entrepreneur. Or as an employee, you will be
+                                    highly
+                                    sought-after in the job market.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-link-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-link">
+                                    <i class="fas fa-briefcase fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Real-world work experience
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    At Sydney Met you will spend time gaining work experience in a real-world
+                                    entrepreneurial company to gain knowledge and skills. You can also work on your
+                                    own
+                                    business projects, preparing you to launch into life after college!
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-success-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-success">
+                                    <i class="fas fa-dollar-sign fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Affordable fees
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    Sydney Met fees and charges are affordable. These fees are set by
+                                    benchmarking
+                                    with
+                                    compariable colleges in Sydney.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-danger-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-danger">
+                                    <i class="fas fa-map-signs fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Pathways for exciting career
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    Sydney Met maintains a strong partnership with businesses while it
+                                    enables
+                                    students
+                                    to pursue actual enterpreneurial ventures as part of their study.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-primary-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-primary">
+                                    <i class="fas fa-university fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Excellent facilities
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    Our campus has everything you need to excel in your studies,
+                                    including computer
+                                    lab,
+                                    wireless internet, library, study spaces and places to relax.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-info-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-info">
+                                    <i class="fas fa-map-marked-alt fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Convenient location
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    Study in the heart of Australia’s most vibrant student city,
+                                    Sydney. Sydney Met
+                                    is
+                                    located in the vibrant suburb of Burwood, a transport hub just
+                                    15 minutes train
+                                    ride
+                                    from Sydney CBD, and home to a large and diverse multicultural
+                                    community. You
+                                    can
+                                    step out of your lectures to discover arts, music, food,
+                                    shopping and sports
+                                    next to
+                                    the college.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-primary-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-primary">
+                                    <i class="fas fa-globe-asia fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Academic excellence
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    Sydney Met is committed to provide high quality courses currently favoured
+                                    by
+                                    students and employers
+                                    alike. Our courses are developed by academics of multicultural backgrounds
+                                    and
+                                    place
+                                    students at the
+                                    centre. In so doing, we encourage critical and independent thinking and
+                                    offer
+                                    positive learning
+                                    experience and outcomes...
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-info-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-info">
+                                    <i class="fas fa-user-graduate fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Student-centred support & services
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    We provide students with timely and tailored support and services. We offer
+                                    culturally sensitive and engaged teaching, learning and assessment services to
+                                    cater
+                                    for students of diverse origins and needs. Sydney Met engages diverse and
+                                    experienced teachers and staff to ensure a supportive and inclusive environment.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-warning-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-warning">
+                                    <i class="fas fa-user-tie fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Be in demand
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    You will develop the highly practical and professional knowledge, skills and the
+                                    attitude needed for becoming an entrepreneur. Or as an employee, you will be
+                                    highly
+                                    sought-after in the job market.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-link-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-link">
+                                    <i class="fas fa-briefcase fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Real-world work experience
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    At Sydney Met you will spend time gaining work experience in a real-world
+                                    entrepreneurial company to gain knowledge and skills. You can also work on your
+                                    own
+                                    business projects, preparing you to launch into life after college!
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-success-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-success">
+                                    <i class="fas fa-dollar-sign fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Affordable fees
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    Sydney Met fees and charges are affordable. These fees are set by
+                                    benchmarking
+                                    with
+                                    compariable colleges in Sydney.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-danger-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-danger">
+                                    <i class="fas fa-map-signs fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Pathways for exciting career
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    Sydney Met maintains a strong partnership with businesses while it
+                                    enables
+                                    students
+                                    to pursue actual enterpreneurial ventures as part of their study.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-primary-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-primary">
+                                    <i class="fas fa-university fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Excellent facilities
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    Our campus has everything you need to excel in your studies,
+                                    including computer
+                                    lab,
+                                    wireless internet, library, study spaces and places to relax.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="media notification has-background-info-light has-text-dark bd-best-item">
+                        <div class="media-content">
+                            <div class="content py-5">
+                                <span class="icon has-text-info">
+                                    <i class="fas fa-map-marked-alt fa-3x"></i>
+                                </span>
+                                <span>
+                                    <h2 class="subtitle is-4">
+                                        Convenient location
+                                    </h2>
+                                </span>
+                                <p class="bd-focus-text">
+                                    Study in the heart of Australia’s most vibrant student city,
+                                    Sydney. Sydney Met
+                                    is
+                                    located in the vibrant suburb of Burwood, a transport hub just
+                                    15 minutes train
+                                    ride
+                                    from Sydney CBD, and home to a large and diverse multicultural
+                                    community. You
+                                    can
+                                    step out of your lectures to discover arts, music, food,
+                                    shopping and sports
+                                    next to
+                                    the college.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section has-text-centered has-background-white">
+        <div class="container py-6">
+            <h1 class="title is-2 has-text-link pb-3">
+                Contact Us
+            </h1>
+            <div class="columns is-multiline notification has-background-light">
+                <div class="column is-6-desktop is-12-tablet py-3">
+                    <iframe class="box"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.4881452584364!2d151.10383201580788!3d-33.87707992692129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bac4b794398d%3A0x9fa822de267c1f1a!2s2-4%20Marmaduke%20St%2C%20Burwood%20NSW%202134!5e0!3m2!1sen!2sau!4v1613011608346!5m2!1sen!2sau"
+                        width="100%" height="440" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="column is-6-desktop is-12-tablet pb-3">
+                    <form class="box">
+                        <h2 class="subtitle is-4">
+                            Get In Touch
+                        </h2>
+                        <div class="field is-horizontal has-text-left">
+                            <div class="field-label is-normal">
+                                <label class="label">Name</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input" type="text" placeholder="First Name">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input" type="text" placeholder="Last Name">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal has-text-left">
+                            <div class="field-label is-normal">
+                                <label class="label">Email</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left has-icons-right">
+                                        <input class="input" type="email" placeholder="Email Number">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal has-text-left">
+                            <div class="field-label is-normal">
+                                <label class="label">Phone</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left has-icons-right">
+                                        <input class="input" type="tel" placeholder="Phone Number">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal has-text-left">
+                            <div class="field-label is-normal">
+                                <label class="label">Message</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <textarea class="textarea"
+                                            placeholder="Please tell us how we can help you . . ."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal has-text-left">
+                            <div class="field-label">
+                                <!-- Left empty for spacing -->
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-info is-rounded is-medium">
+                                            Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer has-background-dark">
+        <div class="container content">
+            <div class="columns py-6">
+                <div class="column">
+                    <a class="has-text-light" href="{{ get_url(path=" /courses/bachelor-business-entrepreneurship")
+                        }}">BBUS (ENTR) <br />Course Brochure</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /courses/entry-requirements") }}">Course Entry
+                        Requirements</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /courses/unit-description") }}">Unit of
+                        Study</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /courses/work-integrated-learning") }}">Work
+                        Integrated Learning (WIL)</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /courses/academic-calendar") }}">Academic
+                        Calendar</a><br />
+                </div>
+                <div class="column">
+                    <a class="has-text-light" href="{{ get_url(path=" /future-students/why-study-at-sydneymet") }}">Why
+                        Study at Sydney Met</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /future-students/how-to-apply") }}">How to
+                        Apply</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /future-students/student-handbook") }}">Student
+                        Handbook</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /future-students/studying-in-australia") }}">Stydy
+                        in Australia</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /future-students/working-in-australia")
+                        }}">Working in Australia</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /future-students/living-in-australia") }}">Living
+                        in Australia</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /future-students/tuition-protection") }}">Tuition
+                        Protection</a>
+                </div>
+                <div class="column">
+                    <a class="has-text-light" href="{{ get_url(path=" /current-students/orientation")
+                        }}">Orientation</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /current-students/enrolment")
+                        }}">Enrolment</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /current-students/learning-hub") }}">Learning
+                        Hub</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /mysydneymet") }}">mySydneyMet</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /moodle") }}">Moodle</a> <span
+                        class="has-text-light"> | </span>
+                    <a class="has-text-light" href="{{ get_url(path=" /mylibrary") }}">Library</a><br />
+                    <a class="has-text-light" href="{{ get_url(path=" /current-students/academic-support") }} ">Academic Support</a><br />
+                    <a class=" has-text-light" href="{{ get_url(path=" /contact-us") }}">Staff Contact</a>
+                </div>
+                <div class="column has-text-light py-1">
+                    <div class="card p-1 m-1">
+                        <a href="#">
+                            <img class="" src="img/sydneymet-logo-text.png" width="246" alt="Sydney Met Logo" />
+                        </a>
+                    </div>
+                    <div class="has-text-light" style="font-size:smaller">PROVIDER PRV14280 | CRICOS XXXXXX
+                    </div>
+                </div>
+                <div class="column">
+                    <a class="has-text-light" href="{{ get_url(path=" /contact-us") }}">
+                        <span style="font-size: x-large; font-weight: 500;">Contact Us</span><br />
+                    </a>
+                    <span class="has-text-light">
+                        <a class="has-text-light" href="{{ get_url(path=" /contact-us#campus-location") }}">
+                            2-4 Marmaduke Street<br />
+                            Burwood, NSW 2134, Australia<br />
+                        </a>
+                        <a href="tel:+61297441356" class="has-text-light">P: +61 2 9744 1356</a><br />
+                        <a href="mailto:admin@sydneymet.com.au" class="has-text-light">E:
+                            admin@sydneymet.com.au</a><br />
+                    </span>
+                    <div style="font-size: 0.6rem;">
+                        <a class="has-text-light fab fa-facebook-f fa-2x mt-1 mr-4" target="_blank"
+                            href="https://www.facebook.com/Sydney-Metropolitan-Institute-of-Technology-289423551656897"></a>
+                        <a class="has-text-light fab fa-twitter fa-2x mt-1 mr-4" target="_blank"
+                            href="https://twitter.com/SydneyMetropol1"></a>
+                        <a class="has-text-light fab fa-linkedin-in fa-2x mt-1 mr-4" target="_blank"
+                            href="https://www.linkedin.com/company/sydney-metropolitan-institute-of-technology"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="has-text-centered">
+                <a href="https://nubik.com.au" target="_blank">
+                    <span class="has-text-light">Powered by:</span>
+                    <span style="color: coral;">Nü</span><span style="color: dodgerblue;">Bik</span>
+                </a>
+                <span class="has-text-light">|</span>
+                <a class="has-text-light" href="{{ get_url(path=" /copyright") }}">&copy; 2020 - <span
+                        class="has-text-info">Sydney Met</span></a>
+                <span class="has-text-light">|</span> <a class="has-text-light" href="{{ get_url(path="
+                    /privacy") }}">Privacy</a> <span class="has-text-light">|</span>
+                <a class="has-text-light" href="{{ get_url(path=" /disclaimer") }}">Disclaimer</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function() {
+          
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+          
+            });
+          });
+    </script> -->
+</body>
+
+</html>
