@@ -1,2 +1,3 @@
 User-agent: *
-Sitemap: https://sydneymet.com.au/site/sitemap.xml
+Allow: /
+Sitemap: https://sydneymet.edu.au/site/sitemap.xml
